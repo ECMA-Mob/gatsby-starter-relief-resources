@@ -8,8 +8,6 @@
   Relief Resources Starter
 </h1>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5996de4f-6208-423a-848d-10cb2914cfcb/deploy-status)](https://app.netlify.com/sites/nervous-beaver-103e5b/deploys)
-
 Kick off your city's relief efforts as we all learn to cope with COVID-19 with this starter powered by Gatsby, Airtable, and community efforts.
 
 ## Overview

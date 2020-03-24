@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-service-relief",
+  "name": "gatsby-starter-relief-resources",
   "private": true,
-  "version": "1.0.8",
+  "version": "1.0.0",
   "main": "index.js",
-  "author": "amberleyromo <amberleyjohanna@gmail.com> (@amberleyjohanna)",
+  "author": "Henry Quinn <henryquinniv@gmail.com> (@quinncuatro)",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
