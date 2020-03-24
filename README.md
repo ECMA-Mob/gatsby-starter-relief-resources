@@ -8,6 +8,8 @@
   Relief Resources Starter
 </h1>
 
+[![npm version](https://badge.fury.io/js/gatsby-starter-relief-resources.svg)](https://badge.fury.io/js/gatsby-starter-relief-resources)
+
 Kick off your city's relief efforts as we all learn to cope with COVID-19 with this starter powered by Gatsby, Airtable, and community efforts.
 
 ## Overview
