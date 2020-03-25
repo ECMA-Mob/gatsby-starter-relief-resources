@@ -40,8 +40,16 @@ Using this template you can set up a relief resources site without touching any 
 
 **4. Go Live**
 
+- Approve entries in Airtable
+- Redploy your site on Netlify
 - Add your site to the [directory](https://servicerelief.us/submit)
 - Spread the word
+
+**5. Local Development**
+
+- Preparation steps
+- Create .env file
+- NPM link local theme repo
 
 ## 1️⃣ Get Ready
 
@@ -245,5 +253,53 @@ From there, follow the steps to add your domain.
 * From the Netlify Overview page of your site, head to the `Deploys` page. 
 * Under the `Trigger deploy` dropdown on the right side of that page, select `Deploy sites`. 
 * After a couple of minutes, Netlify should deploy the latest changes. Refresh your site to double check.
+
+## 5️⃣ Local Development
+
+### Preparation steps
+
+👉🏻 Clone the repos for the [Relief Resources Starter](https://github.com/ECMA-Mob/gatsby-starter-relief-resources) and [Relief Resources Theme](https://github.com/ECMA-Mob/gatsby-theme-relief-resources) to your local machine.
+
+👉🏻 In your terminal, `cd` into each directory you just cloned and run `npm install`.
+
+👉🏻 You'll still need Airtable set up to feed data into your local site, so please go through step `2. Set up data source` of this README. Throw the keys you need to gather into a text file - you'll need them for a later step.
+
+### NPM link local theme repo
+
+👉🏻 For developing a Gatsby theme locally, you want to be able to see the changes without having to publish your package every five minutes. To do that, we're going to use `npm link`.
+
+Here's a [good article](https://medium.com/@the1mills/how-to-test-your-npm-module-without-publishing-it-every-5-minutes-1c4cb4b369be) for understanding `npm link` a little better.
+
+👉🏻 Under the hood, what this is doing is creating a symlink so that when you run `gatsby build` in your local `gatsby-starter-relief-resources` repo, it calls your local `gatsby-theme-relief-resources` repo rather than the published package via NPM.
+
+👉🏻 After running `npm install` in both of your freshly cloned repos, the following commands should handle the link for you:
+
+```bash
+cd <gatsby-theme-relief-resources-root>
+npm link # create a global symlink to the local "gatsby theme" project
+cd <gatsby-starter-relief-resources-root>
+npm link gatsby-theme-relief-resources # create a symlink locally to global "gatsby theme" symlink
+```
+
+### Create .env file
+
+👉🏻 In the root of your local `gatsby-starter-relief-resources` repo, create a `.env.development` file and fill it with the following:
+
+```env
+AIRTABLE_API_KEY=yourAPIKey
+AIRTABLE_BASE_ID=yourBaseID
+AIRTABLE_EMBED_ID=yourEmbedID
+AIRTABLE_TABLE_NAME=yourTableName
+CITY=yourCity
+STATE=yourState
+```
+
+These environment variables will filter into the `gatsby-config.js` file in your local `gatsby-theme-relief-resources` repo to be distributed where needed at build-time.
+
+### Gatsby Develop
+
+👉🏻 When all of the above is done, you should be able to run `gatsby develop` in your local `gatsby-starter-relief-resources` repo. After the build completes, open a browser and check `localhost:80000` to make sure everything built correctly.
+
+👉🏻 When making changes in your local `gatsby-theme-relief-resources` repo, you may have to (for changes in Airtable, you WILL have to) `ctrl-c` out of your `gatsby develop` terminal pane and kick off another develop build to see the changes.
 
 _MORE @TODO_
