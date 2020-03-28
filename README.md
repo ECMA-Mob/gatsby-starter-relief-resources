@@ -81,7 +81,7 @@ If you have an Airtable account, go ahead and [log in](https://airtable.com/logi
 
 To set up Airtable, you can use a base template configured specifically for a relief resources site.
 
-👉🏼 [Open the template](https://airtable.com/addBaseFromShare/shrm1Q96qZIxuMAqx?utm_source=airtable_shared_application) and click "Add base".
+👉🏼 [Open the template](https://airtable.com/addBaseFromShare/shrC4z0Iiugrw4npn?utm_source=airtable_shared_application) and click "Add base".
 
 ![Workspace showing bases in Airtable](./assets/images/airtable-base-copy.png)
 
