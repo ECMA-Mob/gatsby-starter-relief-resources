@@ -81,7 +81,21 @@ If you have an Airtable account, go ahead and [log in](https://airtable.com/logi
 
 To set up Airtable, you can use a base template configured specifically for a relief resources site.
 
-👉🏼 [Open the template](https://airtable.com/addBaseFromShare/shrC4z0Iiugrw4npn?utm_source=airtable_shared_application) and click "Add base".
+👉🏼 [Open the template (Version 2!)](https://airtable.com/addBaseFromShare/shrC4z0Iiugrw4npn?utm_source=airtable_shared_application) and click "Add base".
+
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+
+###  IF YOU'VE PREVIOUSLY ADDED THE VERSION 1 TEMPLATE FOLLOW THE FOLLOWING FOUR STEPS:
+
+⚠️ [Go ahead and add the version 2 template.](https://airtable.com/addBaseFromShare/shrm1Q96qZIxuMAqx?utm_source=airtable_shared_application) and click "Add base".
+
+⚠️ Head to your table of resources from the version 1 template you added previously. Go ahead and select all of the rows you want to copy over, then hit `CTRL-C`.
+
+⚠️ Head to the new table of resources you created from the version 2 template. Create a new row, then hit `CTRL-V`. When given the option, select `Expand the group so that all of the pasted cells will fit.` and hit `Continue`. 
+
+⚠️ Lastly, make sure to manually set the `PageCategory` column for all of the rows you copied over - this is what binds them to a specific page of resources on your site.
+
+⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 
 ![Workspace showing bases in Airtable](./assets/images/airtable-base-copy.png)
 
@@ -244,9 +258,11 @@ From there, follow the steps to add your domain.
 
 ### Last Steps
 
-👉🏼 Be sure to clear out the data pre-loaded into the table you created in Airtable. Add in some organizations you know of in your city.
+👉🏼 Be sure to clear out the data pre-loaded into the table you created in Airtable. Keep the national resources if you'd like, but add in some organizations you know of in your city.
 
 👉🏼 In that Airtable table, there's a column called `Approved`. In order to have any given entry show up on the deployed site, that column needs to be set to `Yes`.
+
+👉🏼 In that Airtable table, there's also a column called `PageCategory`. In order to have a whole category show up on a specific page (i.e. have `Soup Kitchens` show up on the `Food and Finance` page), that column needs to be manually set to a provided page name for each individual row in a category. It's important that you don't add your own `PageCategory` values for now. That customization is coming in a future release.
 
 👉🏼 For now, after events are added to Airtable, you need to trigger a manual deploy on Netlify. 
 
